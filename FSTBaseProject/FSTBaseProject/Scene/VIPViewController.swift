@@ -12,6 +12,25 @@ final class VIPViewController: UIViewController {
         
     }
     // MARK: UI
+    private lazy var stackView: UIStackView = {
+        let stack = UIStackView()
+        return stack
+    }()
+    
+    private lazy var label: UILabel = {
+        let label = UILabel()
+        return label
+    }()
+ 
+    private lazy var textField: UITextField = {
+        let textField = UITextField()
+        return textField
+    }()
+    
+    private lazy var button: UIButton = {
+        let button = UIButton()
+        return button
+    }()
     
     // MARK: Properties
     
@@ -31,7 +50,10 @@ final class VIPViewController: UIViewController {
     
     // MARK: Build
     private func buildHierarchy() {
-        
+        view.addSubview(stackView)
+        stackView.addArrangedSubview(label)
+        stackView.addArrangedSubview(textField)
+        stackView.addArrangedSubview(button)
     }
     
     private func setupConstraints() {
