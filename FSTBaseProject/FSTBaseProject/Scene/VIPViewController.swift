@@ -7,11 +7,34 @@
 
 import UIKit
 
-class VIPViewController: UIViewController {
-
+final class VIPViewController: UIViewController {
+    enum Layout {
+        
+    }
+    // MARK: UI
+    
+    // MARK: Properties
+    
+    // MARK: Initialization
+    
+    // MARK: Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
-        title = "Home"
+        setupUI()
+    }
+    
+    // MARK: Methods
+    private func setupUI() {
+        buildHierarchy()
+        setupConstraints()
+    }
+    
+    // MARK: Build
+    private func buildHierarchy() {
+        
+    }
+    
+    private func setupConstraints() {
+        
     }
 }
