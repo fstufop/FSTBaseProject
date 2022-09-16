@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol VIPDisplaying: AnyObject {
+    func displayAlert(with: AlertViewModel)
+}
+
 final class VIPViewController: UIViewController {
     enum Layout {
         static let viewsHeight: CGFloat = 24
@@ -61,8 +65,17 @@ final class VIPViewController: UIViewController {
     }()
     
     // MARK: Properties
+    var interactor: VIPInteracting?
     
     // MARK: Initialization
+    init(interactor: VIPInteracting) {
+        self.interactor = interactor
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     // MARK: Overrides
     override func viewDidLoad() {
@@ -79,15 +92,9 @@ final class VIPViewController: UIViewController {
     
     @objc
     private func handlerButton(_ sender: UIButton) {
-        label.text = textField.text
-        displayAlert()
-    }
-    
-    private func displayAlert() {
-        let alert = UIAlertController(title: "Algo deu errado", message: "Deu tudo Certo", preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default)
-        alert.addAction(action)
-        self.present(alert, animated: true)
+        guard let text = textField.text else { return }
+        label.text = text
+        interactor?.saveInformation(text)
     }
     
     // MARK: Build
@@ -125,5 +132,14 @@ final class VIPViewController: UIViewController {
         label.heightAnchor.constraint(equalToConstant: Layout.viewsHeight).isActive = true
         textField.heightAnchor.constraint(equalToConstant: Layout.viewsHeight).isActive = true
         button.heightAnchor.constraint(equalToConstant: Layout.viewsHeight).isActive = true
+    }
+}
+
+extension VIPViewController: VIPDisplaying {
+    func displayAlert(with model: AlertViewModel) {
+        let alert = UIAlertController(title: model.title, message: model.message, preferredStyle: .alert)
+        let action = UIAlertAction(title: model.title, style: .default)
+        alert.addAction(action)
+        self.present(alert, animated: true)
     }
 }
