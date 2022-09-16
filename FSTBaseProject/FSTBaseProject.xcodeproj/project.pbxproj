@@ -15,6 +15,10 @@
 		0E600F9F28D1689E00BA507F /* FSTBaseProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E600F9E28D1689E00BA507F /* FSTBaseProjectUITestsLaunchTests.swift */; };
 		0E600FAC28D16B4900BA507F /* VIPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E600FAB28D16B4900BA507F /* VIPViewController.swift */; };
 		0E600FB528D42B0300BA507F /* VIPWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E600FB428D42B0300BA507F /* VIPWorker.swift */; };
+		0E600FB728D42D9B00BA507F /* VIPInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E600FB628D42D9B00BA507F /* VIPInteractor.swift */; };
+		0E600FB928D42EF300BA507F /* VIPFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E600FB828D42EF300BA507F /* VIPFactory.swift */; };
+		0E600FBB28D431C900BA507F /* VIPPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E600FBA28D431C900BA507F /* VIPPresenter.swift */; };
+		0E600FBD28D432C000BA507F /* AlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E600FBC28D432C000BA507F /* AlertViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		0E600F9E28D1689E00BA507F /* FSTBaseProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSTBaseProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0E600FAB28D16B4900BA507F /* VIPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPViewController.swift; sourceTree = "<group>"; };
 		0E600FB428D42B0300BA507F /* VIPWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPWorker.swift; sourceTree = "<group>"; };
+		0E600FB628D42D9B00BA507F /* VIPInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPInteractor.swift; sourceTree = "<group>"; };
+		0E600FB828D42EF300BA507F /* VIPFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPFactory.swift; sourceTree = "<group>"; };
+		0E600FBA28D431C900BA507F /* VIPPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPPresenter.swift; sourceTree = "<group>"; };
+		0E600FBC28D432C000BA507F /* AlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +152,10 @@
 			children = (
 				0E600FAB28D16B4900BA507F /* VIPViewController.swift */,
 				0E600FB428D42B0300BA507F /* VIPWorker.swift */,
+				0E600FB628D42D9B00BA507F /* VIPInteractor.swift */,
+				0E600FBA28D431C900BA507F /* VIPPresenter.swift */,
+				0E600FB828D42EF300BA507F /* VIPFactory.swift */,
+				0E600FBC28D432C000BA507F /* AlertViewModel.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -278,8 +290,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E600FB928D42EF300BA507F /* VIPFactory.swift in Sources */,
+				0E600FB728D42D9B00BA507F /* VIPInteractor.swift in Sources */,
 				0E600FB528D42B0300BA507F /* VIPWorker.swift in Sources */,
+				0E600FBD28D432C000BA507F /* AlertViewModel.swift in Sources */,
 				0E600FAC28D16B4900BA507F /* VIPViewController.swift in Sources */,
+				0E600FBB28D431C900BA507F /* VIPPresenter.swift in Sources */,
 				0E600F7C28D1689D00BA507F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
