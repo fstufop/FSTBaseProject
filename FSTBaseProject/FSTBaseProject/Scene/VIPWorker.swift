@@ -7,7 +7,11 @@
 
 import Foundation
 
-final class VIPWorker {
+protocol VIPWorking {
+    var information: String? { get set }
+}
+
+final class VIPWorker: VIPWorking {
     // MARK: Properties
     enum Keys: String {
         case information
