@@ -138,7 +138,7 @@ final class VIPViewController: UIViewController {
 extension VIPViewController: VIPDisplaying {
     func displayAlert(with model: AlertViewModel) {
         let alert = UIAlertController(title: model.title, message: model.message, preferredStyle: .alert)
-        let action = UIAlertAction(title: model.title, style: .default)
+        let action = UIAlertAction(title: model.buttonTitle, style: .default)
         alert.addAction(action)
         self.present(alert, animated: true)
     }
